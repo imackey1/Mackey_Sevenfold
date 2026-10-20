@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Sevenfold</title>
+  <meta name="description" content="Sevenfold is a dice-based card battler. Choose a champion, build a seven-card deck, and learn how graveyard post-mortems change every roll.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=IM+Fell+English+SC&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Sevenfold<small>Card gaming hub</small></a>
+    <input class="nav-toggle visually-hidden" type="checkbox" id="nav-toggle">
+    <label class="nav-button" for="nav-toggle">Menu</label>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="lobby.html">Lobby</a></li><li><a href="deck.html">Deck Table</a></li><li><a href="rules.html">Rules</a></li><li><a href="team.html">Team</a></li></ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="home-title">
+      <div class="hero__text stack">
+        <p class="eyebrow">A dice card battler</p>
+        <h1 id="home-title">Sevenfold</h1>
+        <p class="hero__tagline">Pick a champion, build a deck of seven, and win clashes with the roll of the dice. Every card you play comes back from the graveyard to help, or hurt, next turn.</p>
+        <div class="cluster">
+          <a class="btn btn--primary" href="lobby.html">Enter Lobby</a>
+          <a class="btn btn--ghost" href="rules.html">Read the rules</a>
+        </div>
+      </div>
+      <div class="fan" aria-hidden="true"><div class="fan__card theme-tide-warden">1d4</div><div class="fan__card theme-gambler">2d6</div><div class="fan__card theme-phoenix">1d20</div><div class="fan__card theme-gambler">1d8</div><div class="fan__card theme-tide-warden">2d10</div></div>
+    </section>
+
+    <section class="section panel" aria-labelledby="online-h">
+      <div class="online">
+        <div>
+          <h2 id="online-h"><span class="live-dot" aria-hidden="true"></span>Players online now</h2>
+          <p class="muted mt-0"><span class="badge badge--demo">Demo value</span> Simulated display. A real live count needs a server, which this HTML and CSS project does not have.</p>
+        </div>
+        <p class="online__num mt-0" role="img" aria-label="1,284 players online (simulated demo number)"></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-h">
+      <div class="section__head"><h2 id="how-h">How it works</h2><p class="muted">Four steps from first click to first clash.</p></div>
+      <ol class="tiles grid-4">
+        <li class="tile"><h3>Choose a champion</h3><p>Your champion decides which cards you can use. <a href="lobby.html">Open the Lobby</a>.</p></li>
+        <li class="tile"><h3>Build 7 of 14</h3><p>Pick seven cards from your champion's pool of fourteen. <a href="deck.html">Go to the Deck Table</a>.</p></li>
+        <li class="tile"><h3>Roll the dice</h3><p>Graveyard cards trigger first, then both players roll. <a href="deck.html#table">Watch a sample match</a>.</p></li>
+        <li class="tile"><h3>Learn the rules</h3><p>Lives, graveyards and dice notation, explained in two minutes. <a href="rules.html">Read the rules</a>.</p></li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="champs-h">
+      <div class="section__head"><h2 id="champs-h">Meet the champions</h2><p class="muted">Hover, tap, or tab to a champion to flip the card. Each one has 14 cards that no other champion can use.</p></div>
+      <div class="grid-3">
+        <a class="flip theme-phoenix" href="rules.html#phoenix"><span class="flip__inner"><span class="flip__face flip__front"><span class="flip__glyph" aria-hidden="true">▲</span><span class="flip__title">Phoenix</span><span class="eyebrow">Ember pool · 14 cards</span></span><span class="flip__face flip__back"><span>Aggressive. High dice, and post-mortems that add dice to your roll or lower the opponent's roll.</span><span class="eyebrow">Read Phoenix strategy</span></span></span></a>
+        <a class="flip theme-gambler" href="rules.html#gambler"><span class="flip__inner"><span class="flip__face flip__front"><span class="flip__glyph" aria-hidden="true">◆</span><span class="flip__title">Gambler</span><span class="eyebrow">Gambit pool · 14 cards</span></span><span class="flip__face flip__back"><span>Risky. Post-mortems that re-roll or gamble on a die, for big swings in either direction.</span><span class="eyebrow">Read Gambler strategy</span></span></span></a>
+        <a class="flip theme-tide-warden" href="rules.html#tide-warden"><span class="flip__inner"><span class="flip__face flip__front"><span class="flip__glyph" aria-hidden="true">●</span><span class="flip__title">Tide Warden</span><span class="eyebrow">Tide pool · 14 cards</span></span><span class="flip__face flip__back"><span>Defensive. Shields for lost clashes, weaker opposing rolls, and the most life gain.</span><span class="eyebrow">Read Tide Warden strategy</span></span></span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sevenfold</strong> · CSC 4370/6370 Project 1 · Track D, Strategy Table Pack</p>
+    <p>Online play, the players-online number, and all dice results are simulated demo data (HTML and CSS only, no scripts).</p>
+    <p>Fonts: IM Fell English SC and Atkinson Hyperlegible via Google Fonts (SIL Open Font License). Card art is drawn with CSS.</p>
+  </footer>
+</body>
+</html>

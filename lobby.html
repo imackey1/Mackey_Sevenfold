@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Lobby | Sevenfold</title>
+  <meta name="description" content="Choose a champion, check your seven-card deck, compare opponent models, and start a simulated battle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=IM+Fell+English+SC&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Sevenfold<small>Card gaming hub</small></a>
+    <input class="nav-toggle visually-hidden" type="checkbox" id="nav-toggle">
+    <label class="nav-button" for="nav-toggle">Menu</label>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul><li><a href="index.html">Home</a></li><li><a href="lobby.html" aria-current="page">Lobby</a></li><li><a href="deck.html">Deck Table</a></li><li><a href="rules.html">Rules</a></li><li><a href="team.html">Team</a></li></ul>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="lobby stack-lg">
+      <section aria-labelledby="lobby-h">
+        <h1 id="lobby-h">Game Lobby</h1>
+        <p class="muted">Three steps before the battle: choose a champion, check your deck, then choose an opponent. Everything here is a simulated demo of an online lobby.</p>
+      </section>
+
+      <section class="section" aria-labelledby="step1-h">
+        <h2 id="step1-h">Step 1: Choose a champion</h2>
+        <fieldset class="champ-grid grid-3">
+          <legend class="visually-hidden">Champion</legend>
+        <label class="champ theme-phoenix"><input class="visually-hidden" type="radio" name="champion" id="ch-phoenix" value="phoenix" checked><span class="champ__body"><span class="champ__glyph" aria-hidden="true">▲</span><span class="champ__name">Phoenix</span><span class="champ__suit">Ember pool</span><span>Aggressive. Adds dice and lowers the opponent's roll.</span><span class="champ__chosen">✓ Chosen champion</span></span></label>
+        <label class="champ theme-gambler"><input class="visually-hidden" type="radio" name="champion" id="ch-gambler" value="gambler"><span class="champ__body"><span class="champ__glyph" aria-hidden="true">◆</span><span class="champ__name">Gambler</span><span class="champ__suit">Gambit pool</span><span>Risky. Re-rolls and gambles for big swings.</span><span class="champ__chosen">✓ Chosen champion</span></span></label>
+        <label class="champ theme-tide-warden"><input class="visually-hidden" type="radio" name="champion" id="ch-tide-warden" value="tide-warden"><span class="champ__body"><span class="champ__glyph" aria-hidden="true">●</span><span class="champ__name">Tide Warden</span><span class="champ__suit">Tide pool</span><span>Defensive. Shields, weakens rolls, heals.</span><span class="champ__chosen">✓ Chosen champion</span></span></label>
+        </fieldset>
+        <div class="panel mt-4" aria-live="polite"><p class="champ-info champ-info--phoenix">You chose <strong>Phoenix</strong>. Your deck can only use the 14 Ember cards. <a href="rules.html#phoenix">Read the Phoenix strategy</a> or <a href="deck.html">edit your deck</a>.</p><p class="champ-info champ-info--gambler">You chose <strong>Gambler</strong>. Your deck can only use the 14 Gambit cards. <a href="rules.html#gambler">Read the Gambler strategy</a> or <a href="deck.html">edit your deck</a>.</p><p class="champ-info champ-info--tide-warden">You chose <strong>Tide Warden</strong>. Your deck can only use the 14 Tide cards. <a href="rules.html#tide-warden">Read the Tide Warden strategy</a> or <a href="deck.html">edit your deck</a>.</p></div>
+      </section>
+
+      <section class="section grid-2 lobby-grid" aria-label="Lives and deck">
+        <div class="panel stack" aria-labelledby="lives-h">
+          <h2 id="lives-h">Your lives</h2>
+          <ul class="lives" aria-label="You start with 5 lives out of a maximum of 6"><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart heart--bonus" aria-hidden="true">♥</li></ul>
+          <p class="muted mt-0">Everyone starts with 5 lives. Losing a clash costs one. The dashed heart is the bonus slot: rare cards can win a life back, up to 6.</p>
+        </div>
+        <div class="panel stack" aria-labelledby="deck-h">
+          <h2 id="deck-h">Step 2: Your deck</h2>
+          <ol class="slot-list"><li>Slot 1: empty</li><li>Slot 2: empty</li><li>Slot 3: empty</li><li>Slot 4: empty</li><li>Slot 5: empty</li><li>Slot 6: empty</li><li>Slot 7: empty</li></ol>
+          <a class="btn btn--ghost" href="deck.html">Edit deck</a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="step3-h">
+        <h2 id="step3-h">Step 3: Choose an opponent</h2>
+        <p class="muted">Compare three simulated opponent models by speed, quality, and cost. Hover, tap, or tab to a card to flip it. The numbers are fixed sample data.</p>
+        <fieldset class="grid-3 champ-grid">
+          <legend class="visually-hidden">Opponent model</legend>
+        <label class="model model--rookie"><input class="visually-hidden" type="radio" name="opponent" value="rookie"><span class="model__inner"><span class="model__face model__front"><h3 class="model__title">Rookie Bot</h3><dl class="metric metric--speed"><dt><span>Speed</span><span>85 / 100</span></dt><dd><span></span></dd></dl><dl class="metric metric--quality"><dt><span>Quality</span><span>30 / 100</span></dt><dd><span></span></dd></dl><dl class="metric metric--cost"><dt><span>Cost</span><span>20 / 100</span></dt><dd><span></span></dd></dl><span class="model__chosen">✓ Chosen opponent</span></span><span class="model__face model__back"><h3 class="model__title">Rookie Bot</h3><span>Plays almost instantly and picks cards without much planning. A cheap stake to face.</span><span class="small muted">Sample data, not a real AI.</span><span class="model__chosen">✓ Chosen opponent</span></span></span></label>
+        <label class="model model--tactician"><input class="visually-hidden" type="radio" name="opponent" value="tactician" checked><span class="model__inner"><span class="model__face model__front"><h3 class="model__title">Tactician</h3><dl class="metric metric--speed"><dt><span>Speed</span><span>60 / 100</span></dt><dd><span></span></dd></dl><dl class="metric metric--quality"><dt><span>Quality</span><span>65 / 100</span></dt><dd><span></span></dd></dl><dl class="metric metric--cost"><dt><span>Cost</span><span>50 / 100</span></dt><dd><span></span></dd></dl><span class="model__chosen">✓ Chosen opponent</span></span><span class="model__face model__back"><h3 class="model__title">Tactician</h3><span>A balanced opponent that weighs its graveyard before choosing a card.</span><span class="small muted">Sample data, not a real AI.</span><span class="model__chosen">✓ Chosen opponent</span></span></span></label>
+        <label class="model model--grandmaster"><input class="visually-hidden" type="radio" name="opponent" value="grandmaster"><span class="model__inner"><span class="model__face model__front"><h3 class="model__title">Grandmaster</h3><dl class="metric metric--speed"><dt><span>Speed</span><span>30 / 100</span></dt><dd><span></span></dd></dl><dl class="metric metric--quality"><dt><span>Quality</span><span>95 / 100</span></dt><dd><span></span></dd></dl><dl class="metric metric--cost"><dt><span>Cost</span><span>85 / 100</span></dt><dd><span></span></dd></dl><span class="model__chosen">✓ Chosen opponent</span></span><span class="model__face model__back"><h3 class="model__title">Grandmaster</h3><span>Takes its time and rarely wastes a card, but the stake for facing it is high.</span><span class="small muted">Sample data, not a real AI.</span><span class="model__chosen">✓ Chosen opponent</span></span></span></label>
+        </fieldset>
+      </section>
+
+      <section class="section panel stack" aria-labelledby="queue-h">
+        <div class="cluster"><h2 id="queue-h" class="mt-0">Match queue</h2><span class="badge badge--demo">Simulated</span></div>
+        <ul class="queue"><li class="q0"><span><strong>AshWalker</strong> · Phoenix</span><a class="btn btn--ghost" href="deck.html#table">Join match (demo)</a></li><li class="q1"><span><strong>LuckyLena</strong> · Gambler</span><a class="btn btn--ghost" href="deck.html#table">Join match (demo)</a></li><li class="q2"><span><strong>TideCaller</strong> · Tide Warden</span><a class="btn btn--ghost" href="deck.html#table">Join match (demo)</a></li><li class="q3"><span><strong>Quill</strong> · Phoenix</span><a class="btn btn--ghost" href="deck.html#table">Join match (demo)</a></li></ul>
+        <div class="cluster"><a class="btn btn--primary" href="deck.html#table">Start Battle</a><span class="muted small">Opens the sample match on the Strategy Table.</span></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sevenfold</strong> · CSC 4370/6370 Project 1 · Track D, Strategy Table Pack</p>
+    <p>Online play, the players-online number, and all dice results are simulated demo data (HTML and CSS only, no scripts).</p>
+    <p>Fonts: IM Fell English SC and Atkinson Hyperlegible via Google Fonts (SIL Open Font License). Card art is drawn with CSS.</p>
+  </footer>
+</body>
+</html>

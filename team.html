@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Introduction | Sevenfold</title>
+  <meta name="description" content="Meet the Sevenfold project leader, responsibilities, and work plan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=IM+Fell+English+SC&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Sevenfold<small>Card gaming hub</small></a>
+    <input class="nav-toggle visually-hidden" type="checkbox" id="nav-toggle">
+    <label class="nav-button" for="nav-toggle">Menu</label>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul><li><a href="index.html">Home</a></li><li><a href="lobby.html">Lobby</a></li><li><a href="deck.html">Deck Table</a></li><li><a href="rules.html">Rules</a></li><li><a href="team.html" aria-current="page">Team</a></li></ul>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="stack-lg">
+      <section aria-labelledby="team-title"><h1 id="team-title">Team Introduction</h1><p class="muted">Sevenfold is a solo project for CSC 4370/6370 at Georgia State University.</p></section>
+      <section class="panel panel--accent stack" aria-labelledby="leader-h">
+        <p class="eyebrow">Project Leader and sole team member</p>
+        <h2 id="leader-h">Ibrahim "Bee" Mackey</h2>
+        <p>Fourth-year Computer Science student who designed, built, tested, and documented Sevenfold, a dice-based card gaming hub made with HTML and CSS only.</p>
+        <h3>Responsibilities</h3>
+        <ul class="stack"><li>Design: game rules, wireframes, colour and type system</li><li>Build: semantic HTML pages and the shared CSS system</li><li>QA: responsive, keyboard, reduced-motion, and link checks</li><li>Project management: Kanban board, daily journal, time tracking, and submission</li></ul>
+      </section>
+      <section aria-labelledby="time-h"><h2 id="time-h">Time tracking by phase</h2>
+        <div class="table-wrap"><table><caption>Planned work sequence (Kanban days, not calendar dates)</caption><thead><tr><th scope="col">Days</th><th scope="col">Phase</th><th scope="col">Deliverables</th></tr></thead><tbody>
+          <tr><td>1 to 3</td><td>Plan and structure</td><td>Track and extension choice, wireframes, colour system, page skeletons, 42-card list</td></tr>
+          <tr><td>4 to 7</td><td>Layout and components</td><td>Grid and Flexbox layouts, card and navigation components, Strategy Table zones</td></tr>
+          <tr><td>8 to 11</td><td>Styling and motion</td><td>Design system, transitions, animations, players-online section, model comparison cards</td></tr>
+          <tr><td>12 to 14</td><td>QA and packaging</td><td>Accessibility review, README, screenshots, QA notes</td></tr>
+          <tr><td>15 to 17</td><td>Buffer, QA and presentation</td><td>Bug fixes, validation, video recording, submission</td></tr></tbody></table></div></section>
+      <section class="panel stack" aria-labelledby="evidence-h"><h2 id="evidence-h">Project evidence</h2>
+        <ul class="stack"><li><a href="docs/KANBAN_BOARD.md">Kanban board</a></li><li><a href="docs/DEVELOPMENT_JOURNAL.md">Development journal</a></li><li><a href="docs/QA_NOTES.md">QA notes</a></li><li><a href="README.md">README</a></li></ul></section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sevenfold</strong> · CSC 4370/6370 Project 1 · Track D, Strategy Table Pack</p>
+    <p>Online play, the players-online number, and all dice results are simulated demo data (HTML and CSS only, no scripts).</p>
+    <p>Fonts: IM Fell English SC and Atkinson Hyperlegible via Google Fonts (SIL Open Font License). Card art is drawn with CSS.</p>
+  </footer>
+</body>
+</html>

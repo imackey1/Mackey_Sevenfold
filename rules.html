@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rules &amp; Strategy | Sevenfold</title>
+  <meta name="description" content="How a Sevenfold turn works: post-mortems, dice, clashes, lives, and a strategy note for each champion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=IM+Fell+English+SC&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Sevenfold<small>Card gaming hub</small></a>
+    <input class="nav-toggle visually-hidden" type="checkbox" id="nav-toggle">
+    <label class="nav-button" for="nav-toggle">Menu</label>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul><li><a href="index.html">Home</a></li><li><a href="lobby.html">Lobby</a></li><li><a href="deck.html">Deck Table</a></li><li><a href="rules.html" aria-current="page">Rules</a></li><li><a href="team.html">Team</a></li></ul>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="stack-lg">
+      <section aria-labelledby="rules-title"><h1 id="rules-title">Rules &amp; Strategy</h1><p class="muted">Everything you need to play Sevenfold, in the order a turn happens. <span class="badge badge--demo">Note</span> Online play, the live player count, and random dice need a server, so this site shows them as simulated demo screens.</p></section>
+      <div class="rules-layout">
+        <nav class="rules-nav" aria-label="On this page"><h2 class="eyebrow">On this page</h2>
+          <ul><li><a href="#overview">Overview</a></li><li><a href="#turn-flow">Turn flow</a></li><li><a href="#lives">Lives</a></li><li><a href="#graveyard">Graveyard</a></li><li><a href="#dice">Dice and suits</a></li><li><a href="#strategy">Champion strategy</a></li><li><a href="#glossary">Glossary</a></li></ul></nav>
+        <div class="stack-lg">
+          <section class="rules-section" id="overview" aria-labelledby="overview-h"><h2 id="overview-h">Overview</h2>
+            <p>Sevenfold is a two-player card battler decided by dice. You choose one of three champions, and your champion decides which cards you may use. Each champion owns a pool of 14 cards, for 42 cards in the whole game. You build a deck of 7 from your pool, then take turns clashing with an opponent.</p>
+            <p>Every card shows dice notation such as <strong>2d6</strong>, meaning roll two six-sided dice and add them up. Each card also has a second, different effect called a post-mortem.</p></section>
+          <section class="rules-section" id="turn-flow" aria-labelledby="flow-h"><h2 id="flow-h">Turn flow</h2>
+            <ol class="flow">
+              <li class="flow__step"><strong>Play a card</strong>Both players choose one card from their remaining deck and play it face up.</li>
+              <li class="flow__step"><strong>Post-mortems trigger</strong>Every card already in a graveyard triggers its effect, oldest first. Each one shakes and glows with a text label, before any dice are rolled.</li>
+              <li class="flow__step"><strong>Roll the dice</strong>Both players roll the dice on their played card, plus any dice added by post-mortems, and apply bonuses and penalties.</li>
+              <li class="flow__step"><strong>Clash</strong>The higher total wins. The loser loses one life. A tie means nobody loses a life.</li>
+              <li class="flow__step"><strong>Graveyard</strong>The card you played moves to your graveyard and starts working next turn.</li>
+            </ol></section>
+          <section class="rules-section" id="lives" aria-labelledby="lives-h"><h2 id="lives-h">Lives</h2>
+            <p>Each player starts with 5 lives and the maximum is 6. You lose the game when you reach 0. Life gain is rare: only 3 of the 42 cards can restore a life.</p>
+            <ul class="lives" aria-label="Example: 5 lives and one bonus slot"><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart" aria-hidden="true">♥</li><li class="heart heart--bonus" aria-hidden="true">♥</li></ul>
+            <p class="mt-4">If both players play all 7 cards and nobody is out of lives, the player with more lives wins. A tie is settled by a final 1d20 roll-off.</p></section>
+          <section class="rules-section" id="graveyard" aria-labelledby="gy-h"><h2 id="gy-h">The graveyard</h2>
+            <p>A post-mortem is the second effect on a card, and it often does no damage at all. Examples: add a die to your roll, re-roll your lowest die, lower the opponent's roll, ignore your next lost clash, or gain a life.</p>
+            <p>Post-mortems keep triggering every later turn while the card is in the graveyard. Effects marked <strong>Once</strong> fire a single time and then dim as <em>Spent</em>. See it happen on the <a href="deck.html#table">Strategy Table</a>.</p></section>
+          <section class="rules-section" id="dice" aria-labelledby="dice-h"><h2 id="dice-h">Dice and suits</h2>
+            <ul class="legend"><li><span class="glyph glyph--ember" aria-hidden="true">▲</span> Ember (Phoenix)</li><li><span class="glyph glyph--gambit" aria-hidden="true">◆</span> Gambit (Gambler)</li><li><span class="glyph glyph--tide" aria-hidden="true">●</span> Tide (Tide Warden)</li></ul>
+            <div class="table-wrap mt-4"><table><caption>Dice notation</caption><thead><tr><th scope="col">Notation</th><th scope="col">Meaning</th><th scope="col">Range</th></tr></thead><tbody>
+              <tr><th scope="row">1d4</th><td>One four-sided die</td><td>1 to 4</td></tr>
+              <tr><th scope="row">2d6</th><td>Two six-sided dice, added</td><td>2 to 12</td></tr>
+              <tr><th scope="row">1d20</th><td>One twenty-sided die</td><td>1 to 20</td></tr></tbody></table></div></section>
+          <section id="strategy" aria-labelledby="strat-h"><h2 id="strat-h">Champion strategy</h2><div class="stack">
+        <article class="panel panel--accent theme-phoenix rules-section" id="phoenix"><h3><span aria-hidden="true">▲</span> Phoenix</h3><p>Aggressive. Play high dice early and let post-mortems pile bonus dice onto every later roll.</p><ul class="stack"><li>Cards like Cinder Strike add +1d4 to every roll once they reach the graveyard.</li><li>Ashen Wing lowers the opponent's roll by 2 each turn, which adds up over a match.</li><li>Rising Ash is rare: save it for when you are behind on lives.</li></ul></article>
+        <article class="panel panel--accent theme-gambler rules-section" id="gambler"><h3><span aria-hidden="true">◆</span> Gambler</h3><p>Risky. Re-rolls and gambles can swing a clash either way, so play them when you need a big result.</p><ul class="stack"><li>Loaded Dice re-rolls your lowest die every turn it sits in the graveyard.</li><li>Wager rolls a 1d6 and adds +1d6 to your roll on a 5 or 6.</li><li>Lucky Coin is rare and only pays off on a 6, so do not rely on it.</li></ul></article>
+        <article class="panel panel--accent theme-tide-warden rules-section" id="tide-warden"><h3><span aria-hidden="true">●</span> Tide Warden</h3><p>Defensive. Shield lost clashes, weaken opposing rolls, and outlast the other player.</p><ul class="stack"><li>Tidal Wall lets you ignore your next lost clash, once.</li><li>Undertow lowers the opponent's roll by 1 every turn.</li><li>Mend is rare and restores one life, up to the maximum of 6.</li></ul></article>
+          </div></section>
+          <section id="glossary" aria-labelledby="gloss-h"><h2 id="gloss-h">Glossary</h2>
+            <details class="accordion"><summary>Post-mortem</summary><div class="accordion__body">The effect a card has after it is played. It triggers from the graveyard on every later turn, before the dice are rolled.</div></details>
+            <details class="accordion"><summary>Clash</summary><div class="accordion__body">The comparison of both players' dice totals. The higher total wins and the loser loses one life.</div></details>
+            <details class="accordion"><summary>Once</summary><div class="accordion__body">A post-mortem marked Once triggers a single time. The card then shows as Spent.</div></details>
+            <details class="accordion"><summary>Rare</summary><div class="accordion__body">One of three cards, one per pool, that can restore a life. A rare card carries a RARE tag.</div></details>
+            <details class="accordion"><summary>Roll-off</summary><div class="accordion__body">A final 1d20 roll each, used only when both players have played all seven cards with equal lives.</div></details>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sevenfold</strong> · CSC 4370/6370 Project 1 · Track D, Strategy Table Pack</p>
+    <p>Online play, the players-online number, and all dice results are simulated demo data (HTML and CSS only, no scripts).</p>
+    <p>Fonts: IM Fell English SC and Atkinson Hyperlegible via Google Fonts (SIL Open Font License). Card art is drawn with CSS.</p>
+  </footer>
+</body>
+</html>
